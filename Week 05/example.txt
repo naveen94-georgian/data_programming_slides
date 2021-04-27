@@ -1,0 +1,10 @@
+'an example module'
+def f():
+    'function f'
+    print('Executing f()')
+
+def g():
+    'function g'
+    print('Executing g()')
+    
+x = 0  # global var

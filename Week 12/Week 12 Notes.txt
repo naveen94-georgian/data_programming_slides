@@ -1,0 +1,83 @@
+1) Install Git bash
+
+2) Create new directory
+
+3) Create Virtual Environment 
+
+python -m venv virtual 
+
+4) activate virtual environment **turn on venv each time
+source virtual/Scripts/activate
+
+5) pip install flask, pip freeze
+
+6) Copy the folder structure from week 9
+static
+templates --> pie-chart.html
+app.py 
+main.py
+
+7) Combine main.py into app.py (in order to get the Procfile to work)
+
+8) In app.py add render template for home ('/')
+
+@app.route('/')
+def index():
+	return render_template('index.html') 
+
+9)Add index.html bootstrap starter template
+
+https://getbootstrap.com/
+
+10) Add nav bar
+
+11) remove elements from nav bar and add google chart as link
+
+12) copy and past bootstrap/ nav bar to pie-chart.html
+
+13) flask run
+
+Hosting On Heroku
+
+1) Sign up for free Heroku account heroku.com
+
+2) Install Heroku CLI (need to restart git-bash)
+https://devcenter.heroku.com/articles/heroku-cli
+
+3) Create professional web server 
+pip install gunicorn
+
+4) Let Heroku know we are using gunicorn by creating a Procfile
+touch Procfile
+
+5) Go to Procfile 
+web: gunicorn app:app
+
+6) create requirements file
+pip freeze > requirements.txt
+
+7) In order to push to Heroku, code needs to be in form of git repo first turn on git (see master)
+git init 
+
+8) add everything to the repo
+git add .
+
+9) commit it to the repo 
+git commit -am 'initial commit'
+
+10) log into Heruku using git
+heroku login
+press any key
+ctrl c
+
+11) Create Heroku app
+heroku create
+test app it created
+
+12) You can change the name of you wish
+heroku rename newName
+
+13) Push code to Heroku
+git push heroku master
+
+14) show app running on account
